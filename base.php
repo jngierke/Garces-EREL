@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Connecting, selecting database
 $link = mysql_connect('127.0.0.1', 'root', 'password')

@@ -1,6 +1,7 @@
 <?php
 include("base.php");
 
+
 // Performing SQL query
 $query = 'SELECT * FROM units';
 $result = mysql_query($query) or die('Query failed: ' . mysql_error());
