@@ -13,8 +13,8 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
         
         $_SESSION['Username'] = $username;
         $_SESSION['LoggedIn'] = true;
-        echo "<h1>Welcome echo $_SESSION["sess_Username"] ?></h1>;
-        header('Location: home.php');
+        echo "Welcome!"; 
+        header('Location: units.php');
         exit();
     }
     else
