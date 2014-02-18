@@ -1,18 +1,30 @@
 <?php
+
 include("base.php");
 
 // Performing SQL query
-$query = 'SELECT * FROM units';
+$query = "SELECT * FROM units WHERE Slug = \"$_GET[unit]\"";
+//print_r($query);
+$result = mysql_query($query) or die('Query failed: ' . mysql_error());
+
+$unit = mysql_fetch_assoc($result);
+//print_r($unit);
+mysql_free_result($result);
+
+// Performing SQL query
+$query = "SELECT * FROM words WHERE UnitID = $unit[ID]";
+//print_r($query);
 $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Garces EREL Vocabulary</title>
+    <title><?php echo $unit['Title']; ?></title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,20 +37,27 @@ $result = mysql_query($query) or die('Query failed: ' . mysql_error());
     <![endif]-->
   </head>
   <body>
-    <h1>What do I want to learn?</h1>
-    
-    <ol>
-    
-    <?php
-    while ($unit = mysql_fetch_assoc($result)) {
-		echo "<li><input type=\"checkbox\"> <a href=\"words.php?unit=$unit[Slug]\">$unit[Title]</a></li>";
+    <h1><?php echo $unit['Title']; ?></h1>
+    <table class="table">
+    	<tr>
+    		<th scope="col">WORD</th>
+    		<th scope="col">I KNOW IT!</th>
+    		<th scope="col">I CAN SAY IT!</th>
+  		</tr>
+  		<?php
+		while ($word = mysql_fetch_assoc($result)) {
+			echo "<tr>";
+			echo "<td><a href=\"definition.php?word=$word[Slug]\">$word[Word]</a></td>";
+			echo "<td><input type=\"checkbox\"></td>";
+			echo "<td><input type=\"checkbox\"></td>";
+			echo "</tr>";
+			
+			//echo "<li><input type=\"checkbox\"> <a href=\"words.php?unit=$row[Slug]\">$row[Title]</a></li>";
+		}
+		mysql_free_result($result);
+		?>
 		
-	}
-	mysql_free_result($result);
-	?>
-
-  		
-	</ol>
+</table>
 	
     
   
@@ -49,5 +68,3 @@ $result = mysql_query($query) or die('Query failed: ' . mysql_error());
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
-
-
