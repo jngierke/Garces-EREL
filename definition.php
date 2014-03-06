@@ -15,6 +15,13 @@ if (!$result) {
 $nextWord = mysql_fetch_assoc($result);
 //print_r($firstResult);
 
+// GET entire row from the units table for the current word
+$result = mysql_query("SELECT * FROM units WHERE ID = $word[UnitID]");
+if (!$result) {
+	die('Query failed: ' . mysql_error());
+}
+
+$unit = mysql_fetch_assoc($result);
 
 
 $title=$word ['Word'] ;
@@ -25,7 +32,7 @@ include("header.php") ;
 
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-3"><a href="index.html" class="btn btn-primary btn-lg active" role="button">&larr; WORD LIST</a></div>
+				<div class="col-md-3"><a href="words.php?unit=<?php echo $unit['Slug'] ?>" class="btn btn-primary btn-lg active" role="button">&larr; WORD LIST</a></div>
 				<div class="col-md-6 text-center"><h1><?php echo $word['Word']; ?></h1></div>
 <?php
 if ($nextWord) {
