@@ -1,6 +1,5 @@
 <?php
 include("base.php");
-print_r($_POST);
 if(!empty($_POST['username']) && !empty($_POST['password']))
 {
 	$username = mysql_real_escape_string($_POST['username']);
@@ -12,8 +11,8 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
     	$row = mysql_fetch_assoc($checklogin);
         
         $_SESSION['Username'] = $username;
-        $_SESSION['LoggedIn'] = true;
-        echo "Welcome!"; 
+
+        //echo "Welcome!"; 
         header('Location: units.php');
         exit();
     }
@@ -47,20 +46,20 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
   <body>
   <form class="form-horizontal" role="form" action="login.php" method="post">
   <div class="form-group">
-    <label for="inputUsername" class="col-sm-2 control-label">Username</label>
+    <label for="inputusername" class="col-sm-2 control-label">username</label>
     <div class="col-sm-10">
-      <input type="username" class="form-control" name="username" id="inputUsername" placeholder="Username">
+      <input type="username" class="form-control" name="username" id="inputusername" placeholder="username">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+    <label for="inputpassword" class="col-sm-2 control-label">password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
+      <input type="password" class="form-control" name="password" id="inputpassword" placeholder="password">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Sign in</button>
+      <button type="submit" class="btn btn-default">sign in</button>
     </div>
   </div>
 </form>

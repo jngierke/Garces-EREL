@@ -4,5 +4,7 @@ include("base.php");
 	session_start();
 	session_destroy();
 	$_SESSION = array();
+	
+	header('Location: login.php');
+        exit();
 ?>
-<meta content="0;index.php" http-equiv="refresh">
