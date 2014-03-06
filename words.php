@@ -14,7 +14,7 @@ $unit = mysql_fetch_assoc($result);
 mysql_free_result($result);
 
 // Performing SQL query
-$query = "SELECT * FROM words WHERE UnitID = $unit[ID]";
+$query = "SELECT * FROM words WHERE UnitID = $unit[ID] ORDER BY Word";
 //print_r($query);
 $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 

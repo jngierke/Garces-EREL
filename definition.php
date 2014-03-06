@@ -1,12 +1,22 @@
 <?php
 include("base.php");
 
-// Performing SQL query
-$query = "SELECT * FROM words WHERE Slug = \"$_GET[word]\"";
-//print_r($query);
-$result = mysql_query($query) or die('Query failed: ' . mysql_error()) ;
+// GET entire row from words table for requested Word (*=entire row)
+$result = mysql_query("SELECT * FROM words WHERE Slug = \"$_GET[word]\"") or die('Query failed: ' . mysql_error()) ;
 $word = mysql_fetch_assoc($result);
 //print_r($word);
+
+// GET entire row from the words table for the next word button 
+$result = mysql_query("SELECT * FROM words WHERE UnitID = $word[UnitID] AND Word > \"$word[Word]\" ORDER BY Word");
+if (!$result) {
+	die('Query failed: ' . mysql_error());
+}
+
+$nextWord = mysql_fetch_assoc($result);
+//print_r($firstResult);
+
+
+
 $title=$word ['Word'] ;
 
 include("header.php") ; 
@@ -17,7 +27,11 @@ include("header.php") ;
 			<div class="row">
 				<div class="col-md-3"><a href="index.html" class="btn btn-primary btn-lg active" role="button">&larr; WORD LIST</a></div>
 				<div class="col-md-6 text-center"><h1><?php echo $word['Word']; ?></h1></div>
-				<div class="col-md-3"><a href="museum.html" class="btn btn-primary btn-lg active" role="button">NEXT ONE! &rarr;</a></div>
+<?php
+if ($nextWord) {
+	echo "<div class=\"col-md-3\"><a href=\"definition.php?word=$nextWord[Slug]\" class=\"btn btn-primary btn-lg active\" role=\"button\">NEXT ONE! &rarr;</a></div>";
+}
+?>
 			</div>
 			<div class="row">
 				<div class="col-md-6 text-center">
