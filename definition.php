@@ -16,16 +16,16 @@ include("header.php") ;
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-3"><a href="index.html" class="btn btn-primary btn-lg active" role="button">&larr; WORD LIST</a></div>
-				<div class="col-md-6 text-center"><h1>PARK</h1></div>
+				<div class="col-md-6 text-center"><h1><?php echo $word['Word']; ?></h1></div>
 				<div class="col-md-3"><a href="museum.html" class="btn btn-primary btn-lg active" role="button">NEXT ONE! &rarr;</a></div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 text-center">
-					<img src="images/park.jpeg" alt="park" height="200" />
+					<img src="images/<?php echo $word['Slug']; ?>.jpeg" alt="<?php echo $word['Word']; ?>" height="200" />
 				</div> 
 				<div class="col-md-6 text-center">
-					<p>[parc]</p>
-					<audio src="audio/park.mp3" alt="park" controls height="200" />
+					<p>[<?php echo $word['Pronunciation']; ?>]</p>
+					<audio src="audio/<?php echo $word['Slug']; ?>.mp3" alt="<?php echo $word['Word']; ?>" controls height="200" />
 				</div>
 			</div>
 			<div class="row">
