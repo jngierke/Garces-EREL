@@ -43,7 +43,7 @@ include("header.php") ;
 		mysql_free_result($result);
 		?>
 		
-</table>
+	</table>
 	
     
   
