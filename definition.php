@@ -46,7 +46,7 @@ if ($nextWord) {
 				</div> 
 				<div class="col-md-6 text-center">
 					<p>[<?php echo $word['Pronunciation']; ?>]</p>
-					<audio src="audio/<?php echo $word['Slug']; ?>.mp3" alt="<?php echo $word['Word']; ?>" controls height="200" />
+					<audio src="mp3/<?php echo $word['Slug']; ?>.mp3" alt="<?php echo $word['Word']; ?>" controls height="200" />
 				</div>
 			</div>
 			<div class="row">

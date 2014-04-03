@@ -30,6 +30,7 @@ include("header.php") ;
     		<th scope="col">I KNOW IT!</th>
     		<th scope="col">I CAN SAY IT!</th>
   		</tr>
+  		
   		<?php
 		while ($word = mysql_fetch_assoc($result)) {
 			echo "<tr>";
