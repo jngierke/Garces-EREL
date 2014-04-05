@@ -53,7 +53,7 @@ if ($nextWord) {
 				<div class="col-md-6 text-center">
 					<form role="form" action="save.php" method="post">
 						<input type="hidden" name="word_id" value="<?php echo $word['ID']; ?>"/>
-						<label><input type="checkbox"> I get it!</label>
+						<label><input type="checkbox" name="knowed" value="1"> I get it!</label>
 						<button type="submit" class="btn btn-default">save</button>
 					</form>
 				</div>
