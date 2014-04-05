@@ -9,8 +9,10 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
     if(mysql_num_rows($checklogin) == 1)
     {
     	$row = mysql_fetch_assoc($checklogin);
+    	//print_r($row);
         
-        $_SESSION['Username'] = $username;
+        $_SESSION['Username'] = $row['username'];
+        $_SESSION['user_id'] = $row['user_id'];
 
         //echo "Welcome!"; 
         header('Location: units.php');

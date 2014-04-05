@@ -50,8 +50,12 @@ if ($nextWord) {
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6 text-center">	
-					<label><input type="checkbox"> I get it!</label>
+				<div class="col-md-6 text-center">
+					<form role="form" action="save.php" method="post">
+						<input type="hidden" name="word_id" value="">
+						<label><input type="checkbox"> I get it!</label>
+						<button type="submit" class="btn btn-default">save</button>
+					</form>
 				</div>
 				<div class="col-md-6 text-center">	
 					<label><input type="checkbox"> I can say it!</label>
