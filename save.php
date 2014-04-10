@@ -1,6 +1,6 @@
 <?php
 include("base.php");
-print_r($_POST);
+//print_r($_POST);
 if ($_POST["knowed"]) {
 	$knowed = mysql_query("INSERT INTO knowed_words SET user_id = $_SESSION[user_id], word_id = $_POST[word_id]");
 	if (!$knowed) {

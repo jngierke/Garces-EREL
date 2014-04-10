@@ -14,7 +14,7 @@ include("header.php") ;
 
 ?>
 	
-    <h1>What do I want to learn?</h1>
+    <h1>Garces Foundation EREL Level 1 Vocabulary</h1>
     
     <ol>
     

@@ -21,7 +21,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
     else
     {
     	echo "<h1>Error</h1>";
-        echo "<p>Oops, wrong username or password. Please <a href=\"index.php\">click here to try again</a>.</p>";
+        echo "<p>Oops, wrong username or password. <a href=\"index.php\">Try again</a>.</p>";
     }
 }
 	?>
