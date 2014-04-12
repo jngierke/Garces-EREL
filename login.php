@@ -13,8 +13,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
         
         $_SESSION['Username'] = $row['username'];
         $_SESSION['user_id'] = $row['user_id'];
-
-        //echo "Welcome!"; 
+ 
         header('Location: units.php');
         exit();
     }
