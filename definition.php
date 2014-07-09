@@ -32,18 +32,9 @@ include("header.php") ;
 
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-3 button-left"><a href="words.php?unit=<?php echo $unit['Slug'] ?>" class="btn btn-primary btn-lg active" role="button">&larr; WORD LIST</a></div>
-				<?php
-			if ($nextWord) {
-						echo "<div class=\"col-md-3 button-right\"><a href=\"definition.php?word=$nextWord[Slug]\" class=\"btn btn-primary btn-lg active\" role=\"button\">NEXT ONE! &rarr;</a></div>";
-				}
-			?>
 				<div class="col-md-6 text-center">
 					<h1><?php echo $word['Word']; ?></h1><h3>[<?php echo $word['Pronunciation']; ?>]</h3>
 				</div>
-
-			</div>
-			<div class="row">
 				<div class="col-md-6 text-center picture">
 					<img src="images/<?php echo $word['Slug']; ?>.jpeg" alt="<?php echo $word['Word']; ?>" height="200" />
 				</div> 
@@ -52,16 +43,22 @@ include("header.php") ;
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6 text-center">
-					<form role="form" action="save.php" method="post">
-						<input type="hidden" name="word_id" value="<?php echo $word['ID']; ?>"/>
-						<label><input type="checkbox" name="knowed" value="1"> I get it!</label>
-						<button type="submit" class="btn btn-default">save</button>
+				<div class="col-md-6 text-center learning-data">
+					<form class="form-inline" role="form" action="save.php" method="post">
+						<input type="hidden" name="word_id" value="6">
+							<label><input type="checkbox" name="knowed" value="1"> I know it!</label><button type="submit" class="btn btn-default know-it">save</button>
+      					<input type="hidden" name="" value="">
+      						<label><input type="checkbox"> I can say it!</label><button type="submit" class="btn btn-default say-it">save</button>
 					</form>
 				</div>
-				<div class="col-md-6 text-center">	
-					<label><input type="checkbox"> I can say it!</label>
-				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 button-left"><a href="words.php?unit=<?php echo $unit['Slug'] ?>" class="btn btn-primary btn-lg active" role="button">&larr; WORDS</a></div>
+				<?php
+			if ($nextWord) {
+						echo "<div class=\"col-md-3 button-right\"><a href=\"definition.php?word=$nextWord[Slug]\" class=\"btn btn-primary btn-lg active\" role=\"button\">NEXT! &rarr;</a></div>";
+				}
+			?>
 			</div>
 		</div>
 	
