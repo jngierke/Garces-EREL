@@ -1,11 +1,13 @@
 h1 {
 	color: black;
 	font-size: 50px;
+	margin-bottom: 0px;
 }
 
 h3 {
 	font-style: italic;
 	color: rgb(0,160,60);
+	margin-top: 0px;
 }
 
 .btn-primary.active {
@@ -52,7 +54,7 @@ h3 {
 }
 
 .text-center audio {
-	margin-top: 10px;
+	margin-top: 5px;
 }
 
 
