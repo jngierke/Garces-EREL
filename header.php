@@ -19,13 +19,20 @@ include("base.php");
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link href="css/site.css" rel="stylesheet">
+    
   </head>
   <body>
-	<div class="btn-group">
-	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-		<?php echo $_SESSION['Username']; ?> <span class="caret"></span> 
-	  </button>
-	  <ul class="dropdown-menu" role="menu">
-		<li><a href="logout.php">Logout</a></li>
-	  </ul>
-	</div>
+  	<header class="clearfix">
+		<div class="btn-group pull-right">
+		  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<?php echo $_SESSION['Username']; ?> <span class="caret"></span> 
+		  </button>
+		  <ul class="dropdown-menu" role="menu">
+			<li><a href="logout.php">Logout</a></li>
+		  </ul>
+		</div>
+		<div class="logo pull-left">
+			<img src="images/logo.garces.jpg" alt="Garces Family Foundation"/>
+		</div>
+	</header>

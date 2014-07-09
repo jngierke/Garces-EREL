@@ -32,20 +32,22 @@ include("header.php") ;
 
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-3"><a href="words.php?unit=<?php echo $unit['Slug'] ?>" class="btn btn-primary btn-lg active" role="button">&larr; WORD LIST</a></div>
-				<div class="col-md-6 text-center"><h1><?php echo $word['Word']; ?></h1></div>
-<?php
-if ($nextWord) {
-	echo "<div class=\"col-md-3\"><a href=\"definition.php?word=$nextWord[Slug]\" class=\"btn btn-primary btn-lg active\" role=\"button\">NEXT ONE! &rarr;</a></div>";
-}
-?>
+				<div class="col-md-3 button-left"><a href="words.php?unit=<?php echo $unit['Slug'] ?>" class="btn btn-primary btn-lg active" role="button">&larr; WORD LIST</a></div>
+				<?php
+			if ($nextWord) {
+						echo "<div class=\"col-md-3 button-right\"><a href=\"definition.php?word=$nextWord[Slug]\" class=\"btn btn-primary btn-lg active\" role=\"button\">NEXT ONE! &rarr;</a></div>";
+				}
+			?>
+				<div class="col-md-6 text-center">
+					<h1><?php echo $word['Word']; ?></h1><h3>[<?php echo $word['Pronunciation']; ?>]</h3>
+				</div>
+
 			</div>
 			<div class="row">
-				<div class="col-md-6 text-center">
+				<div class="col-md-6 text-center picture">
 					<img src="images/<?php echo $word['Slug']; ?>.jpeg" alt="<?php echo $word['Word']; ?>" height="200" />
 				</div> 
-				<div class="col-md-6 text-center">
-					<p>[<?php echo $word['Pronunciation']; ?>]</p>
+				<div class="col-md-6 text-center audio">
 					<audio src="mp3/<?php echo $word['Slug']; ?>.mp3" alt="<?php echo $word['Word']; ?>" controls height="200" />
 				</div>
 			</div>

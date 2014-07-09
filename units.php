@@ -13,8 +13,8 @@ $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 include("header.php") ; 
 
 ?>
-	
-    <h1>Garces Foundation EREL Level 1 Vocabulary</h1>
+
+    <h2>Level 1 Vocabulary</h2>
     
     <ol>
     
