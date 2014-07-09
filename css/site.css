@@ -1,7 +1,8 @@
 h1 {
 	color: black;
-	font-size: 50px;
+	font-size: 35px;
 	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
 h3 {
@@ -32,6 +33,9 @@ h3 {
 	color: black;
 	font-size: 12px;
 	font-weight: 500px;
+	padding: 3px;
+	margin-bottom: 5px;
+	margin-top: 0px;
 }
 
 .btn-group>.btn:first-child, .dropdown-menu>li>a {
