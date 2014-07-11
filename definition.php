@@ -30,29 +30,35 @@ include("header.php") ;
 
 ?>
 
+		//Entire Canvas
 		<div class="container-fluid">
+			
+			
 			<div class="row">
+				// WORD + PRONUNCIATION GUIDE
 				<div class="col-md-6 text-center">
 					<h1><?php echo $word['Word']; ?></h1><h3>[<?php echo $word['Pronunciation']; ?>]</h3>
-				</div>
+				</div>	
+				// IMAGE
 				<div class="col-md-6 text-center picture">
 					<img src="images/<?php echo $word['Slug']; ?>.jpeg" alt="<?php echo $word['Word']; ?>" height="200" />
 				</div> 
+				// AUDIO
 				<div class="col-md-6 text-center audio">
 					<audio src="mp3/<?php echo $word['Slug']; ?>.mp3" alt="<?php echo $word['Word']; ?>" controls height="200" />
 				</div>
 			</div>
 			<div class="row">
+				// I CAN SAY IT! *SAVE BUTTON*
 				<div class="col-md-6 text-center learning-data">
 					<form class="form-inline" role="form" action="save.php" method="post">
 						<input type="hidden" name="word_id" value="6">
-							<label><input type="checkbox" name="knowed" value="1"> I know it!</label><button type="submit" class="btn btn-default know-it">save</button>
-      					<input type="hidden" name="" value="">
-      						<label><input type="checkbox"> I can say it!</label><button type="submit" class="btn btn-default say-it">save</button>
+							<label><input type="checkbox" name="said" value="1"> I can say it!</label><button type="submit" class="btn btn-default said-it">save</button>
 					</form>
 				</div>
 			</div>
 			<div class="row">
+				// BUTTONS - WORDS & NEXT!
 				<div class="col-md-3 button-left"><a href="words.php?unit=<?php echo $unit['Slug'] ?>" class="btn btn-primary btn-lg active" role="button">&larr; WORDS</a></div>
 				<?php
 			if ($nextWord) {

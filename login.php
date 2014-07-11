@@ -44,33 +44,35 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-  <form class="form-horizontal" role="form" action="login.php" method="post">
-  <div class="form-group">
-    <label for="inputusername" class="col-sm-2 control-label">username</label>
-    <div class="col-sm-10">
-      <input type="username" class="form-control" name="username" id="inputusername" placeholder="username">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputpassword" class="col-sm-2 control-label">password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" name="password" id="inputpassword" placeholder="password">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">sign in</button>
-    </div>
-  </div>
-</form>
+	  <body>
+		  <form class="form-horizontal" role="form" action="login.php" method="post">
+			  <div class="form-group">
+				<label for="inputusername" class="col-sm-2 control-label">username</label>
+				<div class="col-sm-10">
+				  <input type="username" class="form-control" name="username" id="inputusername" placeholder="username">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputpassword" class="col-sm-2 control-label">password</label>
+				<div class="col-sm-10">
+				  <input type="password" class="form-control" name="password" id="inputpassword" placeholder="password">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+				  <button type="submit" class="btn btn-default">sign in</button>
+				</div>
+			  </div>
+		  </form>
   
   
   
   
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+  		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://code.jquery.com/jquery.js"></script>
+    
+    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    	<script src="js/bootstrap.min.js"></script>
+    
+  	</body>
 </html>
