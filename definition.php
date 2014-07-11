@@ -30,26 +30,26 @@ include("header.php") ;
 
 ?>
 
-		//Entire Canvas
+		<!-- Entire Canvas -->
 		<div class="container-fluid">
 			
 			
 			<div class="row">
-				// WORD + PRONUNCIATION GUIDE
+				<!-- WORD + PRONUNCIATION GUIDE -->
 				<div class="col-md-6 text-center">
 					<h1><?php echo $word['Word']; ?></h1><h3>[<?php echo $word['Pronunciation']; ?>]</h3>
 				</div>	
-				// IMAGE
+				<!-- IMAGE -->
 				<div class="col-md-6 text-center picture">
 					<img src="images/<?php echo $word['Slug']; ?>.jpeg" alt="<?php echo $word['Word']; ?>" height="200" />
 				</div> 
-				// AUDIO
+				<!-- AUDIO -->
 				<div class="col-md-6 text-center audio">
 					<audio src="mp3/<?php echo $word['Slug']; ?>.mp3" alt="<?php echo $word['Word']; ?>" controls height="200" />
 				</div>
 			</div>
 			<div class="row">
-				// I CAN SAY IT! *SAVE BUTTON*
+				<!-- I CAN SAY IT! *SAVE BUTTON* -->
 				<div class="col-md-6 text-center learning-data">
 					<form class="form-inline" role="form" action="save.php" method="post">
 						<input type="hidden" name="word_id" value="6">
@@ -58,7 +58,7 @@ include("header.php") ;
 				</div>
 			</div>
 			<div class="row">
-				// BUTTONS - WORDS & NEXT!
+				<!-- BUTTONS - WORDS & NEXT! -->
 				<div class="col-md-3 button-left"><a href="words.php?unit=<?php echo $unit['Slug'] ?>" class="btn btn-primary btn-lg active" role="button">&larr; WORDS</a></div>
 				<?php
 			if ($nextWord) {

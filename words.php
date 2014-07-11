@@ -39,7 +39,7 @@ include("header.php") ;
 			echo "<td><input type=\"checkbox\"></td>";
 			echo "</tr>";
 		}
-		//wtf is this?
+		
 		mysql_free_result($result);
 		?>
 		
