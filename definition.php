@@ -36,7 +36,7 @@ include("header.php") ;
 			
 			<div class="row">
 				<!-- WORD + PRONUNCIATION GUIDE -->
-				<div class="col-md-6 text-center">
+				<div class="col-md-6 text-center vocab-word">
 					<h1><?php echo $word['Word']; ?></h1><h3>[<?php echo $word['Pronunciation']; ?>]</h3>
 				</div>	
 				<!-- IMAGE -->
@@ -61,7 +61,7 @@ include("header.php") ;
 				<!-- BUTTONS - WORDS & NEXT! -->
 				<div class="col-md-3 button-left"><a href="words.php?unit=<?php echo $unit['Slug'] ?>" class="btn btn-primary btn-lg active" role="button">&larr; WORDS</a></div>
 				<?php
-			if ($nextWord) {
+					if ($nextWord) {
 						echo "<div class=\"col-md-3 button-right\"><a href=\"definition.php?word=$nextWord[Slug]\" class=\"btn btn-primary btn-lg active\" role=\"button\">NEXT! &rarr;</a></div>";
 				}
 			?>

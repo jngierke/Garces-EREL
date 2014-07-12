@@ -1,9 +1,42 @@
-h1 {
+.level h1 {
+	color: black;
+	font-size: 20px;
+	margin-bottom: 3px;
+	margin-top: 1px;
+	text-align: center;
+}
+
+.unit h1 {
+	color: black;
+	font-size: 20px;
+	margin-bottom: 3px;
+	margin-top: 1px;
+	text-align: center;
+}
+
+.table  {
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	margin-bottom: 20px;
+	width: 75%;
+	text-align: left;
+	margin-left: 60px;
+	margin-right: 60px;
+	color: black;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+	border-right: 1px solid #ddd;
+}
+
+.vocab-word h1 {
 	color: black;
 	font-size: 35px;
 	margin-bottom: 0px;
 	margin-top: 0px;
 }
+
 
 h3 {
 	font-style: italic;
@@ -75,6 +108,23 @@ h3 {
 
 .text-center audio {
 	margin-top: 5px;
+}
+
+.table {	
+	margin-bottom: 20px;
+	width: 75%;
+	text-align: left;
+	margin-left: 75px;
+	margin-right: 75px;
+	color: black;
+}
+
+table {
+	max-width: 75%;
+}
+
+a {
+	color: green;
 }
 
 

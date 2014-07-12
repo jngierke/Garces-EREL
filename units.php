@@ -13,21 +13,26 @@ $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 include("header.php") ; 
 
 ?>
-
-    <h2>Level 1 Vocabulary</h2>
+	<div class ="level">
+    	<h1>Level 1</h1>
+    </div>
     
-    <ol>
-    
-    <?php
-    while ($unit = mysql_fetch_assoc($result)) {
-		echo "<li><input type=\"checkbox\"> <a href=\"words.php?unit=$unit[Slug]\">$unit[Title]</a></li>";
-		
-	}
-	mysql_free_result($result);
-	?>
-
-  		
-	</ol>
+    <table class="table table-bordered table-hover">
+  <tbody>
+    <tr>
+      <th>Unit</th>
+      <th>Title</th>
+    </tr>
+    	<?php while ($unit = mysql_fetch_assoc($result)) {  
+    		echo "<tr>";
+    			echo "<td>$unit[ID]</td>";
+				echo "<td><a href=\"words.php?unit=$unit[Slug]\">$unit[Title]</a></td>";
+			echo "</tr>";	
+			}	   
+		mysql_free_result($result);
+		?>
+	</tbody>
+</table>
 	
     
   
@@ -40,3 +45,5 @@ include("header.php") ;
     
   </body>
 </html>
+
+
