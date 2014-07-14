@@ -44,6 +44,10 @@ h3 {
 	margin-top: 0px;
 }
 
+.btn {
+	font-weight: 100;
+}
+
 .btn.btn-default.know-it {
 	font-size: 12px;
 	color: green;
@@ -52,11 +56,12 @@ h3 {
 	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-.btn.btn-default.say-it {
+.btn.btn-default.said-it {
 	font-size: 12px;
-	color: green;
-	padding: 3px;
-	margin-left: 2px;
+	font-weight: 100;
+	border-color: green;
+	padding: 1.5px 1.5px;
+	margin-left: 5px;
 	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
@@ -125,6 +130,13 @@ table {
 
 a {
 	color: green;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 5px;
+	font-weight: 200;
+	font-size: medium;
 }
 
 
