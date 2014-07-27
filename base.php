@@ -2,6 +2,7 @@
 session_start();
 
 // Connecting, selecting database
-$link = mysql_connect('127.0.0.1', 'root', 'password')
+$link = mysql_connect('localhost', 'jngierke', '05Drpepper')
     or die('Could not connect: ' . mysql_error());
-mysql_select_db('garces-vent1') or die('Could not select database');
+mysql_select_db('jngierke_EREL') or die('Could not select database');
+
