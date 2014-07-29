@@ -2,7 +2,7 @@
 include("base.php");
 
 if(!$_SESSION['Username']) {
-	header("Location: login.php");
+	header("Location: index.php");
 	exit();
 }
 
