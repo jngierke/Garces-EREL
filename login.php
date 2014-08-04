@@ -65,7 +65,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
 			  </div>
 		  </form>
   
-  
+  	<a href="newuser.php">Create New Account</a>
   
   
   		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

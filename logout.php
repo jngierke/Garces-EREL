@@ -5,6 +5,6 @@ include("base.php");
 	session_destroy();
 	$_SESSION = array();
 	
-	header('Location: index.php');
+	header('Location: login.php');
         exit();
 ?>

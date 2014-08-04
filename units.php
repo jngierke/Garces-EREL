@@ -17,7 +17,7 @@ include("header.php") ;
     	<h1>Level 1</h1>
     </div>
     
-    <table class="table table-bordered table-hover">
+<table class="table table-bordered table-hover">
   <tbody>
     <tr>
       <th>Unit</th>
