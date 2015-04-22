@@ -20,7 +20,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
     else
     {
     	echo "<h1>Error</h1>";
-        echo "<p>Oops, wrong username or password. <a href=\"index.php\">Try again</a>.</p>";
+        echo "<p>Oops, wrong username or password. <a href=\"login.php\">Try again</a>.</p>";
     }
 }
 	?>
@@ -65,14 +65,9 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
 			  </div>
 		  </form>
   
-  	<a href="newuser.php">Create New Account</a>
+  	<a href="newuser.php" id="newaccount">Create New Account / Crear Nueva Cuenta</a>
+	<p>For a guest tour of the site, use 'guest' in both fields.</p>
   
-  
-  		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    	<script src="https://code.jquery.com/jquery.js"></script>
-    
-    	<!-- Include all compiled plugins (below), or include individual files as needed -->
-    	<script src="js/bootstrap.min.js"></script>
-    
-  	</body>
-</html>
+ <?php 
+include ("footer.php");
+?>

@@ -50,16 +50,6 @@ include("header.php") ;
 					if ($nextUnit) {
 						echo "<div class=\"col-md-3 button-right\"><a href=\"words.php?unit=$nextUnit[Slug]\" class=\"btn btn-primary btn-lg active\" role=\"button\">NEXT! &rarr;</a></div>";
 				}
-			?>
-			
-    
-  
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    
-  </body>
-</html>
+				 
+include ("footer.php");
+?>

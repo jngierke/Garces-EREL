@@ -81,19 +81,19 @@ include("header.php");
 
 	
 		<div class="form-group">
-			<label for="first_name">Frist Name</label>
+			<label for="first_name">Frist Name / Nombre</label>
 			<input type="text" name="first_name" class="form-control" placeholder="first name" id="first_name">
 		</div>
 		<div class="form-group">
-			<label for="last_name">Last Name</label>
+			<label for="last_name">Last Name / Apellido</label>
 			<input type="text" name="last_name" class="form-control" placeholder="last name" id="last_name">
 		</div>
 		<div class="form-group">
-			<label for="username">Username</label>
+			<label for="username">Username / Nombre de Usuario</label>
 			<input type="text" name="username" class="form-control" placeholder="username" id="username">
 		</div>
 		<div class="form-group">
-			<label for="password">Password</label>
+			<label for="password">Password / Contraseña</label>
 			<input type="password" name="password" class="form-control" placeholder="password" id="password">
 		</div>
   		<div class="form-group">
@@ -101,9 +101,6 @@ include("header.php");
 		</div>		
 	</form>
 	
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+	<?php 
+		include ("footer.php");
+	?>
