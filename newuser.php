@@ -4,12 +4,6 @@ include_once("base.php");
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	// This code will run when the page is loaded with a POST request from the form, 
 	//		but NOT when the page is initally loaded with a GET request
-	
-	// Given the form below, the following variables will be defined:
-	// 		$_POST['first_name']
-	//  	$_POST['rating']
-	//		$_POST['setter']
-	//		$_POST['name']
 
 
 	// initialize a variable for holding errors as an empty array
@@ -42,9 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$last_name = mysql_escape_string($_POST['last_name']);
 		$username = mysql_escape_string($_POST['username']);
 		$password = sha1($_POST['password']);
+		$email = mysql_escape_string($_POST['email']);
 		
 		// execute MySQL query to insert into table
-		mysql_query("INSERT INTO users SET first_name = '$first_name', last_name = '$last_name', username = '$username', password = '$password'") or die('Query failed: ' . mysql_error());
+		mysql_query("INSERT INTO users SET first_name = '$first_name', last_name = '$last_name', username = '$username', password = '$password', email = '$email'") or die('Query failed: ' . mysql_error());
 		
 		// redirect user to another page and exit
 		header("Location: login.php");
@@ -81,7 +76,7 @@ include("header.php");
 
 	
 		<div class="form-group">
-			<label for="first_name">Frist Name / Nombre</label>
+			<label for="first_name">First Name / Nombre</label>
 			<input type="text" name="first_name" class="form-control" placeholder="first name" id="first_name">
 		</div>
 		<div class="form-group">
@@ -95,6 +90,10 @@ include("header.php");
 		<div class="form-group">
 			<label for="password">Password / Contraseña</label>
 			<input type="password" name="password" class="form-control" placeholder="password" id="password">
+		</div>
+		<div class="form-group">
+			<label for="email">E-Mail</label>
+			<input type="text" name="email" class="form-control" placeholder="email" id="email">
 		</div>
   		<div class="form-group">
   			<button type="submit" name="Submit" value="submit" class="btn btn-default">Submit</button>
