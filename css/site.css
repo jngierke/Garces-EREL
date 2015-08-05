@@ -152,3 +152,9 @@ label {
     margin-right: 50px;
   }
 }
+
+@media (min-width: 992px) {
+.col-md-6 {
+	float: inherit;
+	}
+}

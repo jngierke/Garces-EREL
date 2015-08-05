@@ -38,7 +38,7 @@ include("header.php") ;
 				<!-- WORD + PRONUNCIATION GUIDE -->
 				<div class="col-md-6 text-center vocab-word">
 					<h1><?php echo $word['Word']; ?></h1><h3>[<?php echo $word['Pronunciation']; ?>]</h3>
-				</div>	
+				</div>
 				<!-- IMAGE -->
 				<div class="col-md-6 text-center picture">
 					<img src="images/<?php echo $word['Slug']; ?>.jpeg" alt="<?php echo $word['Word']; ?>" height="200" />
